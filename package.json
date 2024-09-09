@@ -29,7 +29,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onLanguage"
+		"onWillChangeTextDocument",
+		"onStartupFinished"
 	],
 	"main": "./dist/extension.js",
 	"scripts": {
