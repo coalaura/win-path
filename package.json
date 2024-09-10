@@ -2,7 +2,7 @@
 	"name": "win-path",
 	"displayName": "Windows Path",
 	"description": "Escape windows path backslashes automatically on paste.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": "coalaura",
 	"publisher": "coalaura",
 	"icon": "logo.png",
@@ -33,6 +33,18 @@
 		"onStartupFinished"
 	],
 	"main": "./dist/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "Windows Path",
+			"properties": {
+				"win-path.quotesOnly": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Only replace backslashes when surrounded by quotes."
+				}
+			}
+		}
+	},
 	"scripts": {
 		"lint": "eslint .",
 		"package": "npm run build && vsce package",

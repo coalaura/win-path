@@ -1,4 +1,5 @@
 import vscode from 'vscode';
+import { quotesOnly } from './config';
 
 let activated = false;
 
@@ -21,6 +22,20 @@ export function activate(context) {
 		const start = edit.range.start,
 			end = start.translate(0, text.length),
 			range = new vscode.Range(start, end);
+
+		if (quotesOnly()) {
+			const document = event.document,
+				line = document.lineAt(start.line).text;
+
+			const before = start.character > 0 ? line.charAt(start.character - 1) : null,
+				after = end.character < line.length ? line.charAt(end.character) : null;
+
+			const quoted = (before === '"' && after === '"') || (before === "'" && after === "'") || (before === '`' && after === '`');
+
+			if (!quoted) {
+				return;
+			}
+		}
 
 		const workspaceEdit = new vscode.WorkspaceEdit();
 		workspaceEdit.replace(event.document.uri, range, text.replace(/\\/g, '\\\\'));
