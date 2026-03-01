@@ -5,16 +5,16 @@
     "": {
       "name": "win-path",
       "devDependencies": {
-        "@types/glob": "latest",
-        "@types/mocha": "latest",
-        "@types/node": "latest",
-        "@types/vscode": "latest",
-        "esbuild": "latest",
-        "esbuild-copy-static-files": "latest",
-        "eslint": "latest",
-        "glob": "latest",
-        "mocha": "latest",
-        "typescript": "latest",
+        "@types/glob": "^9.0.0",
+        "@types/mocha": "^10.0.10",
+        "@types/node": "^25.3.3",
+        "@types/vscode": "1.77.0",
+        "esbuild": "^0.27.3",
+        "esbuild-copy-static-files": "^0.1.0",
+        "eslint": "^10.0.2",
+        "glob": "^13.0.6",
+        "mocha": "^11.7.5",
+        "typescript": "^5.9.3",
       },
     },
   },
@@ -109,7 +109,7 @@
 
     "@types/node": ["@types/node@25.3.3", "", { "dependencies": { "undici-types": "~7.18.0" } }, "sha512-DpzbrH7wIcBaJibpKo9nnSQL0MTRdnWttGyE5haGwK86xgMOkFLp7vEyfQPGLOJh5wNYiJ3V9PmUMDhV9u8kkQ=="],
 
-    "@types/vscode": ["@types/vscode@1.109.0", "", {}, "sha512-0Pf95rnwEIwDbmXGC08r0B4TQhAbsHQ5UyTIgVgoieDe4cOnf92usuR5dEczb6bTKEp7ziZH4TV1TRGPPCExtw=="],
+    "@types/vscode": ["@types/vscode@1.77.0", "", {}, "sha512-MWFN5R7a33n8eJZJmdVlifjig3LWUNRrPeO1xemIcZ0ae0TEQuRc7G2xV0LUX78RZFECY1plYBn+dP/Acc3L0Q=="],
 
     "acorn": ["acorn@8.16.0", "", { "bin": { "acorn": "bin/acorn" } }, "sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw=="],
 
